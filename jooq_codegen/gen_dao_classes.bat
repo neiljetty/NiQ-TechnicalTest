@@ -1,0 +1,1 @@
+java -classpath jooq-3.18.6.jar;jooq-meta-3.18.6.jar;jooq-codegen-3.18.6.jar;reactive-streams-1.0.4.jar;r2dbc-spi-1.0.0.RELEASE.jar;jakarta.xml.bind-api-4.0.1.jar;ojdbc8-21.9.0.0.jar;. org.jooq.codegen.GenerationTool library.xml

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+  <!-- Configure the database connection here -->
+  <jdbc>
+    <driver>oracle.jdbc.driver.OracleDriver</driver>
+    <url>jdbc:oracle:thin:@B08SA722.LOCAL:1521/NIQDB</url>
+    <user>NIQ</user>
+    <password>temp1</password>
+  </jdbc>
+
+  <generator>
+    <!-- The default code generator. You can override this one, to generate your own code style.
+         Supported generators:
+         - org.jooq.codegen.JavaGenerator
+         - org.jooq.codegen.KotlinGenerator
+         - org.jooq.codegen.ScalaGenerator
+         Defaults to org.jooq.codegen.JavaGenerator -->
+    <name>org.jooq.codegen.JavaGenerator</name>
+
+    <database>
+      <!-- The database type. The format here is:
+           org.jooq.meta.[database].[database]Database -->
+      <name>org.jooq.meta.oracle.OracleDatabase</name>
+
+      <!-- The database schema (or in the absence of schema support, in your RDBMS this
+           can be the owner, user, database name) to be generated -->
+      <inputSchema>NIQ</inputSchema>
+
+      <!-- All elements that are generated from your schema
+           (A Java regular expression. Use the pipe to separate several expressions)
+           Watch out for case-sensitivity. Depending on your database, this might be important! -->
+      <includes>.*</includes>
+
+      <!-- All elements that are excluded from your schema
+           (A Java regular expression. Use the pipe to separate several expressions).
+           Excludes match before includes, i.e. excludes have a higher priority -->
+      <excludes></excludes>
+    </database>
+
+    <target>
+      <!-- The destination package of your generated classes (within the destination directory) -->
+      <packageName>com.niq.datamodel</packageName>
+
+      <!-- The destination directory of your generated classes. Using Maven directory layout here -->
+      <directory>Z:\Users\neil.jetty\Documents\niq\jooq_codegen</directory>
+    </target>
+  </generator>
+</configuration>
